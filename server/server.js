@@ -5,7 +5,7 @@ import bidding from './controllers/bidding.controller'
 
 // connection URL
 mongoose.Promise = global.Promise
-mongoose.connect(/*config.mongoUrl*/"mongodb://localhost:27017/webMarket", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true})
+mongoose.connect(config.mongoUrl/*"mongodb://localhost:27017/webMarket"*/, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true})
 mongoose.connection.on('error', () => {
     throw new Error(`unable to connect to database: ${config.mongoUrl}`)
 })
